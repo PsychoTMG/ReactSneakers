@@ -1,23 +1,30 @@
-import logo from './logo.svg';
-import './App.css';
+import './app.scss'
+import Card from './components/Card'
+import Header from './components/Header'
+import Drawer from './components/Drawer'
+import Search from './assets/Group.svg'
 
-function App() {
+
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="wrapper">
+
+      <Drawer />
+      <Header />
+      <div className='content'>
+        <div className='search-block'>
+          <h1>Все кроссовки</h1>
+          <div className='search'>
+            <img src={Search} alt='search' />
+            <input placeholder='Поиск' />
+          </div>
+        </div>
+        <Card />
+        <Card />
+        <Card />
+        <Card />
+
+      </div>
     </div>
   );
 }
