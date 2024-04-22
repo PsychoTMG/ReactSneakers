@@ -36,7 +36,7 @@
 
             img {
                 margin-right: 10px;
-
+                cursor: pointer;
             }
         }
     }
@@ -72,68 +72,16 @@
             margin: 0;
         }
 
-        .card {
+        .cardBlock {
             display: flex;
-            flex-direction: column;
-            border: 1px solid #f3f3f3;
-            padding: 20px;
-            width: 220px;
-            border-radius: 40px;
-            transition: box-shadow 0.2s ease-in-out, transform 0.2s ease-in-out; //поднятие карточки при наведение
-
-
-            &:hover {
-                box-shadow: 0px 20px 35px rgba(0, 0, 0, 0.07);
-                transform: translateY(-5px)
-            }
-
-            .favorite {
-                position: absolute;
-                cursor: pointer;
-            }
-
-            .sneakImg {
-                padding-bottom: 20px;
-            }
-
-            p {
-                width: 150px;
-                font-weight: 400;
-                font-size: 14px;
-            }
-
-
-            .c1 {
-                display: flex;
-                justify-content: space-between;
-                align-items: center;
-
-                .c2 {
-                    display: flex;
-                    flex-direction: column;
-
-                    span {
-                        opacity: 0.3;
-                    }
-                }
-            }
-
-            button {
-                background-color: #fff;
-                border: 1px solid #f3f3f3;
-                box-sizing: border-box;
-                border-radius: 8px;
-                height: 32px;
-                width: 32px;
-                cursor: pointer;
-            }
+            flex-wrap: wrap;
         }
     }
-
 }
 
 
 .overlay {
+    overflow: hidden;
     position: absolute;
     left: 0;
     top: 0;
@@ -143,13 +91,14 @@
     z-index: 1;
 
     .drawer {
+        overflow-x: hidden;
         position: absolute;
         width: 420px;
         background-color: #fff;
         right: 0;
         height: 100%;
         box-shadow: -10px 4px 24px rgba(0, 0, 0, 0.4);
-        padding: 30px;
+        padding: 0px 30px 0px 30px;
         display: flex;
         flex-direction: column;
 
@@ -159,24 +108,20 @@
             padding-bottom: 20px;
             display: flex;
             justify-content: space-between;
-
+img{
+    cursor: pointer;
+}
         }
-
-
-
     }
 
     .meow {
-
         flex: 1;
 
         .cartItems {
-
             display: flex;
             align-items: center;
             border: 1px solid #f2f2f2;
             border-radius: 10px;
-            overflow: hidden;
             padding: 0 20px;
 
             .cartItem {
